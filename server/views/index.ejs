@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - Your Writing and Creativity Companion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+               <!--<img src="https://images.unsplash.com/photo-1586769852044-692d290d56cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="AI Assistant Logo" class="h-8 w-auto mr-3">--> 
+                <span class="text-xl font-semibold text-gray-800">AI Assistant</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="/" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="#features" class="text-gray-700 hover:text-blue-600 transition duration-300">Features</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Your AI Assistant for Writing and Creativity</h1>
+                <p class="text-xl mb-8">Enhance your writing with spell check, grammar correction, sentence rephrasing, content generation, image generation, and caption creation.</p>
+                <a href="#" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full hover:bg-blue-100 transition duration-300 inline-block">Get Started</a>
+            </div>
+        </section>
+
+        <section id="features" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-semibold text-center mb-12">Our Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <a href="/api/spellCheck">     
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md transition duration-300 hover:shadow-lg">
+                        <i class="fas fa-spell-check text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Spell Check</h3>
+                        <p class="text-gray-600">Eliminate spelling errors with our advanced spell-checking tool.</p>
+                    </div></a>
+                    <a href="/api/grammarCheck">  
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md transition duration-300 hover:shadow-lg">
+                        <i class="fas fa-check-double text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Grammar Check</h3>
+                        <p class="text-gray-600">Improve your writing with our comprehensive grammar checker.</p>
+                    </div></a>
+                    <a href="/api/rephrase">  
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md transition duration-300 hover:shadow-lg">
+                        <i class="fas fa-sync text-4xl text-yellow-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Rephrase</h3>
+                        <p class="text-gray-600">Reword your sentences for clarity and impact.</p>
+                    </div></a>
+                    <a href="/api/contentGenerator">
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md transition duration-300 hover:shadow-lg">
+                            <i class="fas fa-pen-fancy text-4xl text-purple-600 mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Content Generation</h3>
+                            <p class="text-gray-600">Create original content with our AI-powered generator.</p>
+                        </div>
+                    </a>
+                   
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md transition duration-300 hover:shadow-lg">
+                        <i class="fas fa-image text-4xl text-pink-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Image Generation</h3>
+                        <p class="text-gray-600">Generate unique images to accompany your content.</p>
+                    </div>
+                    <a href="/api/captionGenerator">
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md transition duration-300 hover:shadow-lg">
+                            <i class="fas fa-comment-alt text-4xl text-indigo-600 mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Caption Generation</h3>
+                            <p class="text-gray-600">Create engaging captions for your images and posts.</p>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between items-center">
+                <div class="w-full md:w-1/3 text-center md:text-left">
+                    <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+                    <p>Email: info@aiassistant.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div class="w-full md:w-1/3 text-center my-4 md:my-0">
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-white hover:text-blue-400 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-blue-400 transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-blue-400 transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 text-center md:text-right">
+                    <p>&copy; 2023 AI Assistant. All rights reserved.</p>
+                    <a href="#" class="text-blue-400 hover:underline">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

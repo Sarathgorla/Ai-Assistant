@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rephrase Sentences - AI Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <h1 class="text-2xl font-bold text-center text-gray-800">Sentence Rephraser</h1>
+            <div class="w-6"></div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <%- include("../partials/navbar.ejs", { Rephrase: false }) %>
+
+    <main class="container mx-auto px-4 py-8">
+        <p class="text-gray-600 mb-4">Type or paste your sentence, and the AI will provide three rephrased versions for you to choose from.</p>
+
+        <!-- Rephrase Form -->
+        <form action="/api/rephrase" method="post" class="bg-white rounded-lg shadow-md p-6">
+            <div class="flex justify-end mb-2">
+                <button type="button" id="clearBtn" class="text-sm text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md px-2 py-1">Clear</button>
+            </div>
+            <textarea name="sentence" id="contentInput" class="w-full h-64 p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" placeholder="Enter your sentence here..."><%=sentence %></textarea>
+            <button type="submit" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300 ease-in-out">Rephrase Sentence</button>
+        </form>
+
+        <!-- Error Handling -->
+        <% if (error) { %>
+            <div class="bg-red-100 text-red-700 p-4 rounded-lg mt-6">
+                <strong>Error:</strong> <%= error %>
+            </div>
+        <% } %>
+
+        <!-- Rephrased Sentences -->
+        <% if (rephrasedSentences && rephrasedSentences.length > 0) { %>
+            <div class="bg-white rounded-lg shadow-md p-6 mt-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Rephrased Sentences:</h2>
+                <ul class="list-disc list-inside text-gray-700">
+                    <% rephrasedSentences.forEach((sentence, index) => { %>
+                        <li class="mb-2">
+                            <p><%= sentence %></p>
+                            <button type="button" class="bg-green-500 text-white px-4 py-1 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 transition duration-300 ease-in-out mt-2" onclick="addToTextarea('<%= sentence %>')">
+                                Select
+                            </button>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% } %>
+
+        <!-- Selected Sentence -->
+        <div class="bg-white rounded-lg shadow-md p-6 mt-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Your Selected Sentence:</h2>
+            <textarea id="selectedSentence" class="w-full h-32 p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" placeholder="Selected sentence will appear here..."></textarea>
+        </div>
+    </main>
+
+    <script>
+        // Clear textarea
+        document.getElementById('clearBtn').addEventListener('click', function() {
+            document.getElementById('contentInput').value = '';
+        });
+
+        // Add selected sentence to textarea
+        function addToTextarea(sentence) {
+            document.getElementById('selectedSentence').value = sentence;
+        }
+    </script>
+     <%-include("../partials/footer.ejs")%>
+</body>
+</html>

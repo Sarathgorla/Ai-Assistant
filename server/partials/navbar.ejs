@@ -1,0 +1,28 @@
+<nav class="bg-blue-600 text-white">
+    <div class="container mx-auto px-4 py-2">
+        <ul class="flex space-x-4 justify-center">
+            <% if (typeof Home === 'undefined' || Home) { %>
+                <li><a href="/" class="hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md px-2 py-1">Home</a></li>
+            <% } %>
+             <% if (typeof SpellCheck === 'undefined' || SpellCheck) { %>
+                <li><a href="/api/spellCheck" class="hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md px-2 py-1">Spell Check</a></li>
+            <% } %>
+            <% if (typeof GrammarCheck === 'undefined' || GrammarCheck) { %>
+                <li><a href="/api/grammarCheck" class="hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md px-2 py-1">Grammar Check</a></li>
+            <% } %>
+            <% if (typeof Rephrase === 'undefined' || Rephrase) { %>
+                <li><a href="/api/rephrase" class="hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md px-2 py-1">Rephrase</a></li>
+            <% } %>
+          
+            <% if (typeof ContentGeneration === 'undefined' || ContentGeneration) { %>
+                <li><a href="/api/contentGenerator" class="hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md px-2 py-1">Content Generation</a></li>
+            <% } %>
+            <% if (typeof ImageGeneration === 'undefined' || ImageGeneration) { %>
+                <li><a href="" class="hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md px-2 py-1">Image Generation</a></li>
+            <% } %>
+            <% if (typeof CaptionGeneration === 'undefined' || CaptionGeneration) { %>
+                <li><a href="/api/captionGenerator" class="hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md px-2 py-1">Caption Generation</a></li>
+            <% } %>
+        </ul>
+    </div>
+</nav>
