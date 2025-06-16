@@ -7,7 +7,7 @@ content generation, spell check, grammar check, image generation, image caption 
 
 Content Generation: Automatically generate relevant and coherent content based on input prompts.
 Spell and Grammar Check: Detect and correct spelling and grammar mistakes in text. 
-Image Generation: Generate images based on user inputs. 
+Image Generation: Generate images based on user inputs.
 Image Caption Generation: Create captions for images using AI.
 Content Rephrasing: Rephrase text to enhance clarity or change the tone.
 
